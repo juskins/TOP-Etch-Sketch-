@@ -1,0 +1,87 @@
+*{
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+}
+body{
+     box-sizing: border-box;
+}
+:root{
+     --primaryColor: #41206f;
+     --secondaryColor: #6b39c6;
+}
+.container{
+     background-color: var(--primaryColor);
+     min-height: 100vh;
+}
+.title{
+     text-align: center;
+     font-size: 4rem;
+     font-family: fantasy;
+     margin-bottom: 1rem;
+     color: cyan;
+}
+.sketch-body{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     width: 70%;
+     margin: auto;
+     height: 500px;
+}
+.sketch-body .left-pane{
+     display: flex;
+     flex-direction: column;
+     row-gap: 50px;
+     border-radius: 10px;
+     background-color: var(--primaryColor);
+     padding: 20px 40px;
+     box-shadow: 2px 2px 20px rgba(0, 0, 0, 1);
+     z-index: 1;
+}
+.left-pane .pen-color{
+     display: flex;
+     column-gap: 30px;
+     align-items: center;
+     color: #ccc;
+     font-size: 1.5rem;
+     margin-bottom: -5px;
+}
+
+.sketch-options{
+     border-radius: 10px;
+     padding: 10px 30px;
+     text-align: center;
+     color: cyan;
+     font-weight: 900;
+     cursor: pointer;
+     box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
+     position: relative;
+     overflow: hidden; 
+}
+.sketch-options:hover{
+     border: 2px solid #ff0052 ;
+
+}
+
+
+
+.grid-size{
+     text-align: center;
+     color: cyan;
+}
+
+
+.right-pane{
+     flex-basis: 70%;
+     border: 2rem solid var(--secondaryColor);
+     height:100%;
+     box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
+     grid-template-columns: repeat(16,1fr);
+     grid-template-rows: repeat(16,1fr);
+     z-index: 1;
+     display: grid;
+     
+}
+.right-pane div{
+}
